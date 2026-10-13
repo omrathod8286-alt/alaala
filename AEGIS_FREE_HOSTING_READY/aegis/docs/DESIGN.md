@@ -1,0 +1,4 @@
+# Design direction
+Aegis is a restrained trust workspace: blue-grey architectural surfaces, one petrol accent, an asymmetric registry/workflow composition, typographic hierarchy and a dedicated ownership timeline. No decorative stats, three-card grids, neon or dashboard scaffolding. Operational simulation warning is persistent. Motion is limited to state entry and control response, respects reduced motion, and never hides security outcomes. Native semantic form controls, visible focus and mobile navigation.
+
+Reviewed https://www.tasteskill.dev/ and /docs on 2026-10-06. Applied published guidance: infer working-surface layout, consistent accent and corner system, accessible typography, restrained motion and avoidance of generic feature cards. GitHub SKILL.md source could not be retrieved. Do not claim full skill compliance or official design-system implementation.

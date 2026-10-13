@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: aegis-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.lock
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health/live
+    envVars:
+      - key: AEGIS_MODE
+        value: demo
+      - key: AEGIS_SIGNING_SECRET
+        generateValue: true
+      - key: AEGIS_DATABASE_URL
+        value: sqlite:///./aegis-demo.db
+      - key: AEGIS_ALLOWED_ORIGINS
+        value: '["http://localhost:5173","http://127.0.0.1:5173"]'
+      - key: AEGIS_TOKEN_MINUTES
+        value: "15"

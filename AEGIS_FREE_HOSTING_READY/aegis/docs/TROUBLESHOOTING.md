@@ -1,0 +1,12 @@
+# Troubleshooting
+- Missing configuration: run `python3 scripts/setup.py`; backend command must use `--env-file ../.env`. Never shell-source a dotenv file.
+- The local demo runs natively; live Fabric integration remains a separate, unvalidated milestone.
+- Unauthorized/expired token: sign out/in. Revoked identities require administrator demo reset.
+- Duplicate asset or scenario fails: reset before rerun; minted IDs are unique by design.
+- Wrong recipient: use an active same-org identity. Cross-org allocation is rejected.
+- User cannot transfer: asset must be active, assigned to that user and have no pending request.
+- API unavailable: check 8000, Vite proxy and backend logs. Use loopback URLs for both services.
+- Vite network interface error in restricted host: bind to 127.0.0.1.
+- Production readiness 503: expected until real adapters are implemented; never switch to demo as a production fallback.
+- Fabric binding failure: verify caller MSP, DID CA attribute and exact enrolled certificate-byte digest. Rotation/recovery not implemented yet.
+- Live network deployment and production dependency integration have not been validated.
